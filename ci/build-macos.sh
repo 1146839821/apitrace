@@ -40,3 +40,4 @@ export CMAKE_BUILD_PARALLEL_LEVEL=$(getconf _NPROCESSORS_ONLN)
 cmake -S. -Bbuild -G "$cmakeGenerator" -DCMAKE_PREFIX_PATH=$qtToolchainPath -DENABLE_GUI=ON
 cmake --build build --use-stderr
 cmake --build build --use-stderr --target check
+cmake --build build --use-stderr --target package
