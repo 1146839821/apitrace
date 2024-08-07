@@ -151,9 +151,9 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: mac64
+        name:  ${{ runner.os }}-5.15.2-1
         path: build/apitrace-*.7z
-        if-no-files-found: error  
+        if-no-files-found: error
 
   release:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
