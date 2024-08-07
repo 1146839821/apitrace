@@ -152,7 +152,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name:  ${{ runner.os }}-5.15.2-1
-        path: build/apitrace-*.7z
+        path: build/apitrace-latest-Darwin.dmg
         if-no-files-found: error
 
   release:
